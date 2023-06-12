@@ -30,6 +30,6 @@
 
 - Despues de crear la base de datos abrir el archivo sql.sql y ejecutar todas las sentencias sql en la terminal a continuación dejo algunas sentencias para verificar las series y movies que se van a listar despues de que todo este ejecutado correctamente
 
-- **series** : select * from list.tv_shows ts where ts.program_type ='series' and ts.release_year >=2010 order by ts.title limit 20
-- **movies** : select * from list.tv_shows ts where ts.program_type ='movie' and ts.release_year >=2010 order by ts.title limit 20
+- **series** : `select * from list.tv_shows ts where ts.program_type ='series' and ts.release_year >=2010 order by ts.title limit 20`
+- **movies** : `select * from list.tv_shows ts where ts.program_type ='movie' and ts.release_year >=2010 order by ts.title limit 20`
 

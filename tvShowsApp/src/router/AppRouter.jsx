@@ -3,19 +3,36 @@ import  NavBar  from "../ui/components/NavBar"
 import MoviesPage from "../pages/MoviesPage";
 import SeriesPage from "../pages/SeriesPage";
 import LoginPage from "../pages/LoginPages";
+import { PublicRoute } from "./PublicRoute";
+import { PrivateRoute } from "./PrivateRoute";
+import { ShowsRoutes } from "../pages/ShowsRoutes";
 const AppRouter = () => {
   return (
     <>
 
     <NavBar/>
-      <Routes>
-        <Route path="/movies" element={<MoviesPage/>}/>
-        <Route path="/series" element={<SeriesPage/>}/>
-        <Route path="/login" element={<LoginPage/>}/>
 
-        <Route path="/" element={<Navigate to="/login" />} />
+    <Routes>
+            
+            <Route path="login/*" element={
+                <PublicRoute>
+                  
+                  <Routes>
+                    <Route path="/*" element={<LoginPage />} />
+                  </Routes>
+                </PublicRoute>
+              }
+            />
+            
+            
+            <Route path="/*" element={
+              <PrivateRoute>
+                <ShowsRoutes/>
+              </PrivateRoute>
+            } />         
+            
 
-      </Routes>
+        </Routes>
     </>
   );
 };

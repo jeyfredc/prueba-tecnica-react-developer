@@ -6,7 +6,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: background-color 0.3s;
-    margin-left: 25px;
+    margin-left: 5px;
 }
 .paragraph:hover {
     background-color: #d6e4e5;
