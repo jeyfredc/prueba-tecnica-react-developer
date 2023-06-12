@@ -1,0 +1,20 @@
+# Archivos y directorios generados automáticamente
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Entornos virtuales y dependencias
+venv/
+env/
+virtualenv/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Archivos de configuración personal
+.env
+.env.*
+
+# Archivos y directorios específicos del editor
+.vscode/
